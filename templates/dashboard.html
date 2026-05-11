@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard — HospitalDB{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Dashboard</h1>
+  <p class="subtitle">Summary overview of hospital data</p>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-6 col-md-3">
+    <div class="stat-card stat-blue">
+      <div class="stat-icon">👤</div>
+      <div class="stat-value">{{ total_patients }}</div>
+      <div class="stat-label">Patients</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="stat-card stat-green">
+      <div class="stat-icon">🩺</div>
+      <div class="stat-value">{{ total_doctors }}</div>
+      <div class="stat-label">Doctors</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="stat-card stat-orange">
+      <div class="stat-icon">📋</div>
+      <div class="stat-value">{{ total_admissions }}</div>
+      <div class="stat-label">Total Admissions</div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="stat-card stat-red">
+      <div class="stat-icon">🔴</div>
+      <div class="stat-value">{{ active_admissions }}</div>
+      <div class="stat-label">Active (No Discharge)</div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="info-card">
+      <div class="info-card-label">Avg Hospital Stay</div>
+      <div class="info-card-value">{{ avg_stay }} <span class="info-unit">days</span></div>
+      <p class="info-desc">Average across all discharged patients</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="info-card">
+      <div class="info-card-label">Top Doctor</div>
+      <div class="info-card-value">
+        {% if top_doctor %}{{ top_doctor.name }}{% else %}—{% endif %}
+      </div>
+      {% if top_doctor %}
+      <p class="info-desc">{{ top_doctor.cnt }} admission(s) recorded</p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="info-card">
+      <div class="info-card-label">Admissions by Year</div>
+      {% for row in admissions_by_year %}
+        <div class="year-row">
+          <span class="year-label">{{ row.yr }}</span>
+          <span class="year-count">{{ row.cnt }} admission(s)</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

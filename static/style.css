@@ -1,0 +1,209 @@
+/* ── Variables ───────────────────────────────────────────── */
+:root {
+  --bg:        #f4f6fb;
+  --surface:   #ffffff;
+  --border:    #e2e8f0;
+  --text:      #1a2035;
+  --muted:     #64748b;
+  --primary:   #2563eb;
+  --primary-h: #1d4ed8;
+  --radius:    10px;
+  --shadow:    0 2px 12px rgba(0,0,0,.07);
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* ── Navbar ──────────────────────────────────────────────── */
+.navbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+  box-shadow: var(--shadow);
+}
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text) !important;
+  letter-spacing: -0.3px;
+}
+.brand-icon { font-size: 1.2rem; }
+.navbar .nav-link {
+  color: var(--muted) !important;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  background: #eff6ff;
+  color: var(--primary) !important;
+}
+
+/* ── Page Header ─────────────────────────────────────────── */
+.page-header {
+  margin-bottom: 1.75rem;
+}
+.page-header h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.2rem;
+}
+.page-header .subtitle {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ── Stat Cards ──────────────────────────────────────────── */
+.stat-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.15s;
+}
+.stat-card:hover { transform: translateY(-2px); }
+.stat-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.stat-label { color: var(--muted); font-size: 0.82rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.stat-blue  .stat-value { color: #2563eb; }
+.stat-green .stat-value { color: #16a34a; }
+.stat-orange .stat-value { color: #ea580c; }
+.stat-red   .stat-value { color: #dc2626; }
+
+/* ── Info Cards ──────────────────────────────────────────── */
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+.info-card-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.info-card-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+.info-unit { font-size: 1rem; font-weight: 400; color: var(--muted); }
+.info-desc { color: var(--muted); font-size: 0.85rem; margin: 0; }
+
+.year-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.year-row:last-child { border-bottom: none; }
+.year-label { font-weight: 600; }
+.year-count { color: var(--muted); }
+
+/* ── Form Card ───────────────────────────────────────────── */
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+}
+.form-card-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.form-control, .form-select {
+  border-color: var(--border);
+  border-radius: 7px;
+  font-size: 0.9rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+}
+.form-label { font-size: 0.85rem; font-weight: 500; color: var(--muted); margin-bottom: 0.3rem; }
+.required { color: #dc2626; }
+
+/* ── Table Card ──────────────────────────────────────────── */
+.table-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.table { margin: 0; }
+.table thead th {
+  background: #f8fafc;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  padding: 0.85rem 1rem;
+}
+.table tbody td {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+  border-color: var(--border);
+  font-size: 0.9rem;
+}
+.table-hover tbody tr:hover { background: #f8fafc; }
+.id-col { font-family: 'DM Mono', monospace; color: var(--muted); font-size: 0.82rem; }
+
+/* ── Badges ──────────────────────────────────────────────── */
+.badge-spec {
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 20px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.badge-notes {
+  background: #f0fdf4;
+  color: #15803d;
+  border-radius: 20px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  font-weight: 500;
+  border-radius: 7px;
+}
+.btn-primary:hover { background: var(--primary-h); border-color: var(--primary-h); }
+.btn-outline-danger, .btn-outline-success { border-radius: 7px; font-size: 0.82rem; }
+
+/* ── Alerts ──────────────────────────────────────────────── */
+.alert { border-radius: var(--radius); font-size: 0.9rem; }
