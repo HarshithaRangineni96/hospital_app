@@ -15,7 +15,7 @@ app.secret_key = "hospital_secret_key_change_in_prod"
 # ── Database Config ──────────────────────────────────────────
 # Change user/password/host/dbname to match your MySQL setup
 app.config["SQLALCHEMY_DATABASE_URI"] = (
-    "mysql+pymysql://root:password@localhost/hospital_db"
+    "mysql+pymysql://root:root12341996@localhost/hospital_db"
 )
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
