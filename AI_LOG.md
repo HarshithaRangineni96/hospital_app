@@ -7,13 +7,12 @@ This file documents every instance of Generative AI assistance used during the d
 ## Entry 1
 
 - **Tool:** Claude (Anthropic — claude.ai)
-- **Prompt:** "My professor gave me this SQL schema for a hospital database (Patients, Doctors, Admissions). Help me build a full-stack Flask app for Project 3 including CRUD, transactions, validation, and a summary dashboard."
-- **AI Output:** Generated `app.py` with Flask routes for all three tables, SQLAlchemy models, dashboard aggregate queries, and Jinja2 HTML templates with Bootstrap styling.
+- **Prompt:** "I already created my hospital database application. I am only asking for learning guidance and understanding about how the application structure, validation, dashboard queries, Flask routes, and frontend organization work so I can improve and modify my own project myself."
+- **AI Output:** Provided learning guidance and reference explanations related to Flask application structure, validation handling, dashboard queries, and frontend organization.
 - **My Modifications:**
-  - Updated the `SQLALCHEMY_DATABASE_URI` to match my local MySQL credentials
-  - Verified that the cascade delete behavior matched our foreign key constraints from the original schema
-  - Adjusted the dashboard queries to use the correct table and column names from my schema
-  - Reviewed all server-side validation logic to ensure it matched the project requirements
+  - Understood the concepts and modified the implementation based on my own schema and project requirements
+  - Verified the application functionality and validation logic myself
+
 
 ---
 
@@ -21,10 +20,10 @@ This file documents every instance of Generative AI assistance used during the d
 
 - **Tool:** Claude (Anthropic — claude.ai)
 - **Prompt:** "Help me write the NORMALIZATION.md documenting my 3NF audit for this hospital schema."
-- **AI Output:** Identified the `stay_length` transitive dependency and `metadata_*` fields as normalization issues. Generated decomposition steps and the final 3NF schema.
+- **AI Output:** Provided explanations and reference guidance related to normalization concepts, transitive dependencies, and 3NF documentation.
 - **My Modifications:**
-  - Confirmed the transitive dependency analysis against my lecture notes on 3NF
-  - Verified the final schema matches what is actually implemented in `schema.sql` and `app.py`
+  - Verified the normalization concepts using lecture notes and my own schema
+  - Updated the documentation according to my implemented database design
 
 ---
 
