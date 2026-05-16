@@ -1,4 +1,4 @@
-# 🏥 Hospital Admissions App
+# 🏥 Hospital Admissions Application
 
 A full-stack web application for managing hospital patient admissions, built with Python, Flask, SQLAlchemy, and MySQL.
 
