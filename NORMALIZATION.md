@@ -58,7 +58,7 @@ These columns are operational metadata with no business-logic dependencies and n
 
 ---
 
-## 4. Final Relational Schema (3NF)
+## 4. Final Relational Schema (3NF) Normalization form
 
 ```
 Patients(patient_id PK, name UNIQUE NOT NULL, date_of_birth NOT NULL)
